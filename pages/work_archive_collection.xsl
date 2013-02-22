@@ -18,6 +18,25 @@
 		<div class="row">
 			<div class="largeimage frame" style="position:absolute;background-color:#fff;top:50px;left:50%;margin-left:-304px;z-index:2;display:none;"></div>
 			<xsl:apply-templates select="collection/entry/artworks/item" /> <!-- below -->
+			
+			
+			<!-- slideshow -->
+			<div style="position:absolute;background-color:#fff;top:50px;left:50%;margin-left:-304px;z-index:2;">
+				<div class="cycle-slideshow center" data-cycle-timeout="2000" data-cycle-prev="#prev" data-cycle-next="#next">
+				    <img src="http://malsup.github.com/images/p1.jpg" width="608" />
+				    <img src="http://malsup.github.com/images/p2.jpg" width="608" />
+				    <img src="http://malsup.github.com/images/p3.jpg" width="608" />
+				    <img src="http://malsup.github.com/images/p4.jpg" width="608" />
+				</div>
+				<div>
+				    <a href="#" id="prev">Prev</a> 
+				    <a href="#" id="next">Next</a>
+				</div>
+			</div>
+			<!-- end slideshow -->
+
+
+			
 		</div>
 		
 		<xsl:if test="collection/entry/description">

@@ -31,11 +31,8 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 			<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 			<script src="{$workspace}/js/bootstrap.js"></script>
-			<script src="{$workspace}/js/jquery.cycle-lite.js"></script>
-			
-			<script type="text/javascript" src="//use.typekit.net/vua3ker.js"></script>
-			<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-			
+			<script src="{$workspace}/js/jquery.cycle2.js"></script>
+						
 			<script src="{$workspace}/js/mt.js"></script>
 			<script src="{$workspace}/js/jquery.placeholder.min.js"></script>
 			<script src="{$workspace}/js/jquery.ajaxify.min.js"></script>
