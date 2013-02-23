@@ -63,7 +63,7 @@ h2.biodate {
 	box-shadow:0px 0px 10px rgba(55,55,55,0.2);
 }
 
-.closebutton {
+.closebutton, .slideshowclosebutton {
 	position:absolute;
 	top:-35px;
 	font-size:10px;

@@ -12,6 +12,7 @@
 		</div>
 		<div class="span6 shiftupmobile">
 			<h2 style="float:right;"><a href="{$root}/work/archive">back</a></h2>
+			<h2 class="showslideshow" style="float:right;margin-right:10px;"><a href="#">slideshow</a></h2>
 		</div>
 	</div>
 	<div class="clearfix mainfade">	
@@ -21,16 +22,14 @@
 			
 			
 			<!-- slideshow -->
-			<div style="position:absolute;background-color:#fff;top:50px;left:50%;margin-left:-304px;z-index:2;">
-				<div class="cycle-slideshow center" data-cycle-timeout="2000" data-cycle-prev="#prev" data-cycle-next="#next">
-				    <img src="http://malsup.github.com/images/p1.jpg" width="608" />
-				    <img src="http://malsup.github.com/images/p2.jpg" width="608" />
-				    <img src="http://malsup.github.com/images/p3.jpg" width="608" />
-				    <img src="http://malsup.github.com/images/p4.jpg" width="608" />
-				</div>
-				<div>
-				    <a href="#" id="prev">Prev</a> 
-				    <a href="#" id="next">Next</a>
+			<div class="slideshow" style="position:absolute;top:50px;left:50%;margin-left:-304px;z-index:2; display:none;">
+				<a id="next" style="position:absolute;right: 0; top: -35px; font-size: 10px; background-color: #fff;padding: 5px 10px;border: 1px solid #f9f9f9;box-shadow: 0px 0px 10px rgba(55,55,55,0.2);" href="#">&#8250;</a>
+				<a id="prev" style="position:absolute;right: 35px; top: -35px; font-size: 10px; background-color: #fff;padding: 5px 10px;border: 1px solid #f9f9f9;box-shadow: 0px 0px 10px rgba(55,55,55,0.2);" href="#">&#8249;</a>
+				<div class="cycle-slideshow" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
+				  <xsl:apply-templates select="collection/entry/artworks/item" mode="slideshow" />
+					<div style="position: absolute; top:0; z-index:9999;">
+					    <div class="slideshowclosebutton"><a href="#">&#x00D7;</a></div>
+					</div>
 				</div>
 			</div>
 			<!-- end slideshow -->
@@ -83,9 +82,10 @@
 		<h2><xsl:value-of select="title" /></h2>
 		<p class="caption"><xsl:value-of select="caption" /></p>
 	</div>
-	
+</xsl:template>
 
-
+<xsl:template match="collection/entry/artworks/item" mode="slideshow">
+	<img class="frame" src="{$root}/image/1/608/0/0/assets/images/{artwork/filename}" thelink="{$root}/work/view/{title/@handle}" largesrc="{artwork/filename}" width="100%" />
 </xsl:template>
 
 </xsl:stylesheet>

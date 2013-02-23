@@ -11,6 +11,17 @@
 
 $(document).ready(function(){
 
+	$('.showslideshow').click(function() {
+		$('.overlay').fadeTo(500,0.9);
+		$('.slideshow').fadeIn(500);
+		resizeOverlay();
+	});
+	
+	$('.slideshowclosebutton, .overlay').click(function() {
+		$('.slideshow').fadeOut(500);
+		$('.overlay').fadeOut(500);
+	});
+
 	if( $('.alert-success') ) {
 		setTimeout(function() {
 			$('.alert-success').fadeOut(500);
@@ -53,5 +64,9 @@ $(document).ready(function(){
 		$('.pagination li a').removeClass('active');
 		$(this).addClass('active');
 	});
+	
+	$(window).resize(function() {
+		resizeOverlay();
+	})
     
 });
