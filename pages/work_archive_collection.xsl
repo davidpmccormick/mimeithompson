@@ -22,13 +22,14 @@
 			
 			
 			<!-- slideshow -->
-			<div class="slideshow" style="position:absolute;top:50px;left:50%;margin-left:-304px;z-index:2; display:none;">
+			<div class="slideshow">
 				<a id="next" style="position:absolute;right: 0; top: -35px; font-size: 10px; background-color: #fff;padding: 5px 10px;border: 1px solid #f9f9f9;box-shadow: 0px 0px 10px rgba(55,55,55,0.2);" href="#">&#8250;</a>
 				<a id="prev" style="position:absolute;right: 35px; top: -35px; font-size: 10px; background-color: #fff;padding: 5px 10px;border: 1px solid #f9f9f9;box-shadow: 0px 0px 10px rgba(55,55,55,0.2);" href="#">&#8249;</a>
-				<div class="cycle-slideshow" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
+				<div class="cycle-slideshow largeslideshowimage" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
 				  <xsl:apply-templates select="collection/entry/artworks/item" mode="slideshow" />
 					<div style="position: absolute; top:0; z-index:9999;">
 					    <div class="slideshowclosebutton"><a href="#">&#x00D7;</a></div>
+					    <div class="slideshowdetails"><a href="#">view full details</a></div>
 					</div>
 				</div>
 			</div>

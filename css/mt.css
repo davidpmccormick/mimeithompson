@@ -41,7 +41,11 @@ h2.biodate {
 	margin-left:30px;
 }
 
-.overlay {
+.largeslideshowimage {
+	
+}
+
+.overlay, .slideshowoverlay {
 	position:absolute;
 	z-index: 1;
 	top:0;
@@ -63,6 +67,18 @@ h2.biodate {
 	box-shadow:0px 0px 10px rgba(55,55,55,0.2);
 }
 
+.slideshowdetails {
+	position:absolute;
+	top:-35px;
+	font-size:10px;
+	left:35px;
+	width: 70px;
+	background-color:#fff;
+	padding:5px 10px;
+	border:1px solid #f9f9f9;
+	box-shadow:0px 0px 10px rgba(55,55,55,0.2);
+}
+
 .closebutton, .slideshowclosebutton {
 	position:absolute;
 	top:-35px;
@@ -73,6 +89,15 @@ h2.biodate {
 	border:1px solid #f9f9f9;
 	box-shadow:0px 0px 10px rgba(55,55,55,0.2);
 	cursor: pointer;
+}
+
+.slideshow {
+	position:absolute;
+	top:50px;
+	left:50%;
+	margin-left:-304px;
+	z-index:2;
+	display:none;
 }
 
 .sendbutton {
@@ -224,9 +249,19 @@ border-left-width: 0;
 }
 /* specific for the large images */
 @media (max-width: 648px) {
-	.largeimage { width: auto; }
-	.largeimage img { width:100%; }
-	.largeimage { margin-left:10px!important; margin-right:10px!important; left:0!important; }	
+	.largeimage, .largeslideshowimage { width: auto; margin-left:10px!important; margin-right:10px!important; left:0!important; }
+	.largeimage img, .largeslideshowimage img { width:100%; }
+	
+	.slideshow {
+		left:0;
+		margin-left:0;
+	}
+	#next {
+		right: 8px!important;
+	}
+	#prev {
+		right: 43px!important;
+	}
 }
 
 /* Large desktop */

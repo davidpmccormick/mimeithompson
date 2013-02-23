@@ -1,6 +1,6 @@
 	function resizeOverlay() {
 		var docHeight = $(document).height();
-		$('.overlay').css('height', docHeight);
+		$('.overlay, .slideshowoverlay').css('height', docHeight);
 	}
 	
 	function scrollUpToPast() {
@@ -12,15 +12,20 @@
 $(document).ready(function(){
 
 	$('.showslideshow').click(function() {
-		$('.overlay').fadeTo(500,0.9);
-		$('.slideshow').fadeIn(500);
+		$('.slideshowoverlay').fadeTo(500,0.9);
+		$('.slideshow').fadeTo(500,1);
 		resizeOverlay();
 	});
 	
-	$('.slideshowclosebutton, .overlay').click(function() {
+	$('.slideshowclosebutton, .slideshowoverlay').click(function() {
 		$('.slideshow').fadeOut(500);
-		$('.overlay').fadeOut(500);
+		$('.slideshowoverlay').fadeOut(500);
 	});
+	
+	$('.slideshowdetails').click(function() {
+		var theLink = $('.cycle-slide-active').attr('thelink');
+		window.location.href = theLink;
+	})
 
 	if( $('.alert-success') ) {
 		setTimeout(function() {

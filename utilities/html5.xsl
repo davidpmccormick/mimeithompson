@@ -44,6 +44,7 @@
 		
 		<body id="{$current-page}-page">
 			<div id="{$root}" class="overlay"></div>
+			<div class="slideshowoverlay"></div>
 			<div class="container" style="margin-top:10px;">
 				<header>
 					<div class="row" style="margin-top:20px;">
