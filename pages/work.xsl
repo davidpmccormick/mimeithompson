@@ -10,9 +10,29 @@
 			<li class="active"><a href="{$root}/work">recent work</a></li>
 			<li><a href="{$root}/work/archive">archive</a></li>
 		</ul>
+		<ul class="span6">
+			<li class="showslideshow" style="float:right;"><a href="#">slideshow</a></li>
+		</ul>
 	</div>
+	
 	<div class="row mainfade">
 		<xsl:apply-templates select="recentwork/entry/artwork/item" /> <!-- below -->
+		
+		<!-- slideshow -->
+		<div class="slideshow">
+			<a id="next" style="position:absolute;right: 0; top: -35px; font-size: 10px; background-color: #fff;padding: 5px 10px;border: 1px solid #f9f9f9;box-shadow: 0px 0px 10px rgba(55,55,55,0.2);" href="#">&#8250;</a>
+			<a id="prev" style="position:absolute;right: 35px; top: -35px; font-size: 10px; background-color: #fff;padding: 5px 10px;border: 1px solid #f9f9f9;box-shadow: 0px 0px 10px rgba(55,55,55,0.2);" href="#">&#8249;</a>
+			<div class="cycle-slideshow largeslideshowimage" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
+			  <xsl:apply-templates select="recentwork/entry/artwork/item" mode="slideshow" />
+				<div style="position: absolute; top:0; z-index:9999;">
+				    <div class="slideshowclosebutton"><a href="#">&#x00D7;</a></div>
+				    <div class="slideshowdetails"><a href="#">view full details</a></div>
+				</div>
+			</div>
+		</div>
+		<!-- end slideshow -->
+		
+		
 	</div>
 </xsl:template>
 
@@ -35,5 +55,10 @@
 		<p class="caption"><xsl:value-of select="caption" /></p>
 	</div>
 </xsl:template>
+
+<xsl:template match="recentwork/entry/artwork/item" mode="slideshow">
+	<img class="frame" src="{$root}/image/1/608/0/0/assets/images/{artwork/filename}" thelink="{$root}/work/view/{title/@handle}" largesrc="{artwork/filename}" width="100%" />
+</xsl:template>
+
 
 </xsl:stylesheet>
