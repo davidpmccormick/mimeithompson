@@ -1,3 +1,37 @@
+@font-face {
+	font-family: 'Akkurat';
+	src: url('fonts/Akkur.eot');
+}
+
+@font-face {
+	font-family: 'Akkurat';
+	src: url('fonts/Akkur.woff') format('woff'),
+	url('fonts/Akkur.svg#Akkurat') format('svg');
+}
+
+@font-face {
+	font-family: 'Akkurat-Bold';
+	src: url('fonts/AkkurBol.eot');
+}
+
+@font-face {
+  font-family: 'Akkurat-Bold';
+  src: url('fonts/AkkurBol.woff') format('woff'),
+  url('fonts/AkkurBol.svg#Akkurat-Bold') format('svg');
+}
+
+@font-face {
+	font-family: 'Akkurat-Light';
+	src: url('fonts/AkkurLig.eot');
+}
+
+@font-face {
+	font-family: 'Akkurat-Light';
+	src: url('fonts/AkkurLig.woff') format('woff'),
+	url('fonts/AkkurLig.svg#Akkurat-Light') format('svg');
+}
+
+
 .mainfade, .footer { display:none; }
 .footer p { font-size: 11px; }
 .maincontent { margin-top:25px; }
@@ -9,8 +43,8 @@ a {
    transition:color 0.2s ease;  
 }
 
-strong, b { font-weight:700!important; }
-em, i { font-style:italic!important;}
+strong, b { font-weight:normal!important; font-family: 'Akkurat-Bold';  }
+em, i { font-style:normal!important; font-family: 'Akkurat-Light'; }
 
 .homeevents {
 	color:#444;
@@ -72,7 +106,7 @@ h2.biodate {
 	top:-35px;
 	font-size:10px;
 	left:35px;
-	width: 70px;
+	width: 85px;
 	background-color:#fff;
 	padding:5px 10px;
 	border:1px solid #f9f9f9;
@@ -191,7 +225,7 @@ h2.biodate {
 
 
 .caption {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family:'Akkurat', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size:11px;
 	color:#444;
 	text-shadow: none;
@@ -206,7 +240,7 @@ h2.biodate {
 .submenu li a, .eventtitle a, .inheritcolor a { color:inherit; text-shadow: none; }
 .submenu li a:hover, .submenu li.active a, .eventtitle a:hover { color:#999; text-decoration: none; }
 
-p { text-shadow: none; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:13px; }
+p { text-shadow: none; font-family: 'Akkurat', "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:13px; }
 
 h1 { font-weight:normal; font-style:normal; text-shadow: none; font-size:18px; color:#444; }
 h2 { font-weight:normal; font-style:normal }
