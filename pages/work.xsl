@@ -11,7 +11,7 @@
 			<li><a href="{$root}/work/archive">archive</a></li>
 		</ul>
 		<ul class="span6">
-			<li class="showslideshow" style="float:right;"><a href="#">slideshow</a></li>
+			<li class="showslideshow recentshiftupmobile" style="float:right; margin-right:0;"><a href="#">slideshow</a></li>
 		</ul>
 	</div>
 	

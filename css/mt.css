@@ -324,6 +324,9 @@ border-left-width: 0;
 	.shiftupmobile {
 		margin-top: -18px;
 	}
+	.recentshiftupmobile {
+		margin-top: -9px;
+	}
 	.span3 img {
 		width:100%;
 		height:auto;
