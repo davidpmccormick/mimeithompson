@@ -5,7 +5,6 @@
 <xsl:import href='../utilities/html5.xsl'/>
 
 <xsl:template match="data">
-
 	<div class="row mainfade">
 		<xsl:apply-templates select="collections/entry" /> <!-- below -->
 	</div>

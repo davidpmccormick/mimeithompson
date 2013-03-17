@@ -12,7 +12,6 @@
 					<a href="{root}/work/view/{homepage/entry/link/item/@handle}"><img src="{$root}/image/2/928/300/5/0/assets/images/{homepage/entry/artwork/filename}" width="100%" /></a>
 				</div>
 			</div>
-			
 		</div>
 		
 		<div class="row homeevents">

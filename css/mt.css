@@ -188,13 +188,13 @@ h2.biodate {
 
 #menu li a {
 	text-decoration:none;
-	color:inherit;
+	color:#777;
 	text-shadow: none;
 	font-size:16px;
 }
 
 #menu li a:hover, #menu li.active a, #menu li.activeparent a {
-	color:#999;
+	color:#111;
 }
 
 .frame {
@@ -265,7 +265,7 @@ h2.bottommargin10 { margin-bottom:10px; }
 
 #detail-page p:last-child, #education-page p:last-child { margin-bottom: 15px; }
 
-a { color:#444; }
+a { color:#777; }
 a:hover { color:#999; text-decoration: none; }
 
 .occurrence { margin-bottom:10px; }
