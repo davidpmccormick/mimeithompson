@@ -5,12 +5,6 @@
 <xsl:import href='../utilities/html5.xsl'/>
 
 <xsl:template match="data">
-	<div class="row submenu">
-		<ul class="span6">
-			<li><a href="{$root}/work">recent work</a></li>
-			<li><a href="{$root}/work/archive">archive</a></li>
-		</ul>
-	</div>
 	<div class="row mainfade">
 		<div class="span8 workcontainer">
 			<div class="frame">
@@ -21,10 +15,8 @@
 			<h2><xsl:value-of select="artworkview/entry/title" /></h2>
 			<p class="caption"><xsl:value-of select="artworkview/entry/caption" /></p>
 			<p><xsl:value-of select="artworkview/entry/description" /></p>
-			
 		</div>
 	</div>
-	
 </xsl:template>
 
 </xsl:stylesheet>

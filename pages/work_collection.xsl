@@ -11,7 +11,7 @@
 			<h2 class="archivedate"><xsl:value-of select="collection/entry/title" /></h2>
 		</div>
 		<div class="span6 shiftupmobile">
-			<h2 style="float:right;"><a href="{$root}/work/archive">back</a></h2>
+			<h2 style="float:right;"><a href="{$root}/work">back</a></h2>
 			<h2 class="showslideshow" style="float:right;margin-right:10px;"><a href="#">slideshow</a></h2>
 		</div>
 	</div>
